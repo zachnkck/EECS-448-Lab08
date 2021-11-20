@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<img id="images" src="" height="600" width="600">
+	<br>
+	<button onclick="decPics()">Previous</button>	<button onclick="incPics()">Next</button>
+	<p>*Unfortunately, not my own dog</p>
+	<script>
+		let curImg = 0;
+		let images = ["img0.jpg","img1.jpg","img2.jpg","img3.jpg","img4.jpg"];
+		let imgTag = document.getElementById("images");
+		imgTag.setAttribute("src", images[0]);
+		
+		function decPics() {
+			if(curImg != 0) {
+				curImg--;
+			}
+			else {
+				curImg = 4;
+			}
+			imgTag.setAttribute("src", images[curImg]);
+		}
+		
+		function incPics() {
+			if(curImg != 4) {
+				curImg++;
+			}
+			else {
+				curImg = 0;
+			}
+			imgTag.setAttribute("src", images[curImg]);
+		}
+	</script>
+</html>

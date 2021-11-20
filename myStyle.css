@@ -1,0 +1,26 @@
+body
+{
+	background-image: url(rat.jpg); background-size: 100% 100%; background-attachment: fixed;
+}
+
+p.title
+{
+	font-size: 40px;
+	padding-left: 10px;
+}
+
+p.underTitle
+{
+	font-size:20px;
+	padding-left: 10px;
+	font-family: monospace;
+}
+
+p.bio
+{
+	background-color: black;
+	color: white;
+	font-family: serif;
+	margin: 20px;
+}
+	

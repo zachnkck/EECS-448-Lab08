@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<p>Password: <input id="pass1" type="password"></p>
+	<p>Verify Password: <input id="pass2" type ="password"></p>
+	<button onclick="validatePass()">Validate</button>
+	<script>
+		function validatePass() {
+			let input1 = document.getElementById("pass1").value;
+			let input2 = document.getElementById("pass2").value;
+			if(input1 != input2 && (input1.length < 8 || input2.length < 8)) {
+				alert("Passwords do not match and one or more are less than 8 characters long");
+			}
+			else if(input1 != input2) {
+				alert("Passwords do not match");
+			}
+			else if(input1.length < 8) {
+				alert("Password is less than 8 characters long");
+			}
+		}
+	</script>
+</html>

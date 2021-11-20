@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<p id="dummyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu mauris lacinia, aliquet sem ac, molestie metus. Duis lobortis id tortor at ultrices. Etiam efficitur pretium odio quis auctor. Quisque vehicula facilisis lectus in volutpat. Aenean imperdiet nunc sed ante iaculis molestie. Nulla sit amet feugiat urna. Mauris blandit tortor sed mi ultricies semper. Aenean ornare orci sit amet ultricies suscipit. Fusce imperdiet dui lorem, eu scelerisque arcu sollicitudin id. Vestibulum imperdiet faucibus velit non accumsan.</p>
+	<br>
+	<p>Border----------------------------------------------</p>
+	<p>Red Value: <input id="bdRed" type="text"></p>
+	<p>Green Value: <input id="bdGreen" type="text"></p>
+	<p>Blue Value: <input id="bdBlue" type="text"></p>
+	<p>Width: <input id="bdWidth" type="text"></p>
+	<br><br>
+	<p>Background------------------------------------------</p>
+	<p>Red Value: <input id="bgRed" type="text"></p>
+	<p>Green Value: <input id="bgGreen" type="text"></p>
+	<p>Blue Value: <input id="bgBlue" type="text"></p>
+	<br>
+	<p>Color values should be within 0-255</p>
+	<button onclick="updateStyle()">Update</button>
+	<script>
+		let exampleText = document.getElementById("dummyText");
+	
+		function updateStyle() {
+			let borderRed = document.getElementById("bdRed").value.toString();
+			let borderGreen = document.getElementById("bdGreen").value.toString();		
+			let borderBlue = document.getElementById("bdBlue").value.toString();	
+			let borderWidth = document.getElementById("bdWidth").value.toString();	
+	
+			let backgroundRed = document.getElementById("bgRed").value.toString();
+			let backgroundGreen = document.getElementById("bgGreen").value.toString();
+			let backgroundBlue = document.getElementById("bgBlue").value.toString();
+			
+			exampleText.style.border = borderWidth + "px " + "solid " + "rgb(" + borderRed + "," + borderGreen + "," + borderBlue + ")";
+			exampleText.style.backgroundColor = "rgb(" + backgroundRed + "," + backgroundGreen + "," + backgroundBlue + ")";	
+		}
+	</script>
+</html>
